@@ -1,0 +1,371 @@
+/* Estilos Globais e Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+    /* Evita rolagem horizontal indesejada */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header e Navegação Responsiva */
+.header {
+    background: #007BFF;
+    color: white;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 40px;
+    /* Ajuste a altura conforme necessário */
+    width: auto;
+    /* Mantém a proporção da imagem */
+    /* Outros estilos como margin, padding, etc., se precisar */
+    border-radius: 50%;
+}
+
+/*.header .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}*/
+
+.nav-menu {
+    display: none;
+    /* Esconde o menu de navegação por padrão em telas pequenas */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffad33;
+}
+
+.navburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    /* Mostra o botão navburger em telas pequenas */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: hsl(0, 0%, 9%);
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Esconde a sidebar por padrão */
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    padding-top: 60px;
+    /* Espaço para o header */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+
+    /*ackground-color: #575757;*/
+    background-color: #ffad33;
+}
+
+.sidebar .fa-solid {
+    margin-right: 10px;
+}
+
+/* Banner Responsivo */
+/*.banner {
+    background: url('./Banner-007.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+   
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}*/
+
+/* Banner Responsivo */
+.banner {
+    background: url('./Banner.png ')no-repeat center center/cover;
+    color: white;
+    /* Cor padrão para o texto do banner */
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Remova a cor 'white' aqui se ela estiver definida diretamente,
+       pois o 'color: white;' no .banner já cuidará disso */
+}
+
+.banner h1 .destaque-verde {
+    color: #ffad33;
+    /* Um tom de verde, você pode ajustar o código HEX */
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 768px) {
+
+    /* ... (seu código existente) ... */
+    .banner h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Componentes de Cartão (Cards) */
+.cards-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* Carrossel Infinito */
+.carousel-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    animation: infinite-scroll 20s linear infinite;
+    width: 200%;
+    /* Duplica a largura para a rolagem infinita */
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+    /* Pausa a rolagem ao passar o mouse */
+}
+
+.carousel-track img {
+    flex-shrink: 0;
+    width: 25%;
+    /* 100% / 4 slides */
+    height: auto;
+    display: block;
+}
+
+@keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+        /* Rola 50% para a esquerda */
+    }
+}
+
+/* Formulário */
+.form-section {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé (Footer) */
+.footer {
+    background-color: hsl(0, 3%, 8%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    /* Empurra o footer para o final da página */
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #007BFF;
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 768px) {
+    .navburger {
+        display: none;
+        /* Esconde o botão navburger em telas maiores */
+    }
+
+    .nav-menu {
+        display: block;
+        /* Mostra o menu de navegação em telas maiores */
+    }
+
+    .sidebar {
+        display: none;
+        /* Esconde a sidebar em telas maiores */
+    }
+
+    /* Regra adicionada para telas de desktop */
+    .banner {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner h1 {
+        font-size: 3.5rem;
+    }
+}

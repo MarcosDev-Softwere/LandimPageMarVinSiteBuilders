@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Basic meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarvinSiteBuilders</title>
+    <!-- Link to external CSS stylesheet for styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Meta tags for SEO -->
+    <meta name="description"
+        content="Biblioteca de componentes web modernos e responsivos. Crie sites e landing pages otimizados com nossos componentes de código limpo e alta performance.">
+    <meta name="keywords"
+        content="componentes web, biblioteca de componentes, HTML, CSS, JavaScript, design responsivo, carrossel, formulário, landing page, site, MarvinSiteBilders">
+    <meta name="author" content="MarvinSiteBilders">
+
+    <!-- Open Graph Protocol (para redes sociais como Facebook) -->
+    <meta property="og:title" content="MarvinSiteBilders - Biblioteca de Componentes Web">
+    <meta property="og:description"
+        content="Componentes modernos e responsivos para o seu projeto. Construa sites e landing pages de forma fácil e rápida.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/007BFF/FFFFFF?text=MarvinSiteBilders">
+    <meta property="og:url" content="https://www.seusite.com.br">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (para o Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@seuarroba">
+    <meta name="twitter:title" content="MarvinSiteBilders - Biblioteca de Componentes Web">
+    <meta name="twitter:description"
+        content="Componentes modernos e responsivos para o seu projeto. Construa sites e landing pages de forma fácil e rápida.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/007BFF/FFFFFF?text=MarvinSiteBilders">
+
+</head>
+
+<body>
+
+    <!-- Header section with navigation -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./Logo.jpeg" alt="Logotipo da Empresa">
+        </a>
+        <button class="navburger" id="navburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#banner">Início</a></li>
+                <li><a href="#cards">Componentes</a></li>
+                <li><a href="#carousel">Carrossel</a></li>
+                <li><a href="#formulario">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#banner"><i class="fa-solid fa-house"></i> Início</a></li>
+            <li><a href="#cards"><i class="fa-solid fa-box-archive"></i> Cards</a></li>
+            <li><a href="#carousel"><i class="fa-solid fa-images"></i> Carrossel</a></li>
+            <li><a href="#formulario"><i class="fa-solid fa-envelope"></i> Formulário</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="container">
+
+        <!-- Hero/Banner section -->
+        <!--<section class="banner" id="banner">
+            <h1>Seu site é a vitrine da sua marca. </h1>
+           
+        </section>-->
+
+        <div class="banner">
+            <h1>
+                <span class="destaque-verde">Seu site é </span> a vitrine <span class="destaque-verde">da </span> sua
+                marca
+            </h1>
+
+            <p> Escolha quem entende disso ! </p>
+        </div>
+
+        <!-- Section for displaying card components -->
+        <section class="cards-section" id="cards">
+            <h2>Nossos Componentes</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Código Limpo</h3>
+                    <p>Estruturas HTML, CSS e JS otimizadas e fáceis de entender.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Design Responsivo</h3>
+                    <p>Componentes que se adaptam a qualquer tamanho de tela.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h3>Performance</h3>
+                    <p>Construído para ser leve e rápido, garantindo a melhor experiência.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section for the infinite carousel component -->
+        <section class="carousel-section" id="carousel">
+            <h2>Carrossel Infinito</h2>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Original slides -->
+                    <img src="./CarrocelInfinito.png" alt="Slide 1">
+                    <img src="./CarrocelInfinito.png" alt="Slide 2">
+                    <img src="./CarrocelInfinito.png" alt="Slde 3">
+                    <img src="./CarrocelInfinito.png" alt="Slide 4">
+                    <!-- Duplicated slides for the infinite loop effect -->
+                    <img src="./CarrocelInfinito.png" alt="Slide 1">
+                    <img src="./CarrocelInfinito.png" alt="Slide 2">
+                    <img src="./CarrocelInfinito.png" alt="Slide 3">
+                    <img src="./CarrocelInfinito.png" alt="Slide 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section for the contact form -->
+        <section class="form-section" id="formulario">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm" class="contact-form"
+                action="https://formsubmit.co/marcosviniciussouzasilva07@gmail.com" method="POST" target="_blank">
+                <input type="hidden" name="_subject" value="Novo Contato do Site!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://www.seusite.com.br">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer section with copyright and social media links -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Biblioteca de Componentes Web. Todos os direitos reservados MarVIn Site Builders .
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the JavaScript file for interactivity -->
+    <script src="min.js"></script>
+</body>
+
+</html>
