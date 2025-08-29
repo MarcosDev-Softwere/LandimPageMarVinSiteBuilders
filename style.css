@@ -150,8 +150,11 @@ body {
 
 /* Banner Responsivo */
 .banner {
-    background: url('./Banner.png ')no-repeat center center/cover;
-    color: white;
+    background: url('./MarcosBarra.png ')no-repeat center center/cover;
+    color: #141313;
+   font-size: x-large;
+   font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* Cor padrão para o texto do banner */
     text-align: center;
     padding: 100px 20px;
@@ -162,6 +165,7 @@ body {
 
 .banner h1 {
     font-size: 2.5rem;
+    font-size: small;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     /* Remova a cor 'white' aqui se ela estiver definida diretamente,
